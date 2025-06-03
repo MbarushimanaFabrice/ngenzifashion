@@ -9,8 +9,12 @@
   },
   "dependencies": {
     "connect-livereload": "^0.6.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.5.0",
     "express": "^5.1.0",
-    "livereload": "^0.9.3"
+    "livereload": "^0.9.3",
+    "mysql2": "^3.14.1",
+    "sequelize": "^6.37.7"
   },
   "devDependencies": {
     "@types/express": "^5.0.2",
