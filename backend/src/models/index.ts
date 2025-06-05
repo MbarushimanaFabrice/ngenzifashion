@@ -5,6 +5,7 @@ import Products from "./Products";
 import Product_categories from "./Product_categories";
 import Product_images from "./Product_images";
 import Product_variants from "./Product_variants";
+import Customers from "./Customers";
 
 export {
   User,
@@ -13,7 +14,8 @@ export {
   Products,
   Product_categories,
   Product_images,
-  Product_variants
+  Product_variants,
+  Customers
 };
 
 // User.hasMany(Shop,{
