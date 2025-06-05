@@ -4,8 +4,7 @@ import express from 'express';
 const cors=require('cors');
 import dotenv from 'dotenv';
 import sequelize from './config/database';
-import routes from './routes';
-
+import './models';
 dotenv.config();
  
 const app = express();
@@ -17,16 +16,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 // Routes
-app.use('/api', routes);
-
-// Health check route
-app.get('/health', (req, res) => {
-  res.status(200).json({
-    status: 'OK',
-    message: 'Server is running',
-    timestamp: new Date().toISOString(),
-  });
-});
+  
 
 // Database connection and server start
 const startServer = async () => {
@@ -35,13 +25,12 @@ const startServer = async () => {
     console.log('Database connection has been established successfully.');
     
     // Sync database (creates tables if they don't exist)
-    await sequelize.sync({ force: false });
+    await sequelize.sync({ force: true });
     console.log('Database synchronized successfully.');
     
     app.listen(PORT, () => {
       console.log(`Server is running on port ${PORT}`);
-      console.log(`Health check: http://localhost:${PORT}/health`);
-      console.log(`API endpoints: http://localhost:${PORT}/api`);
+       console.log(`API endpoints: http://localhost:${PORT}/api`);
     });
   } catch (error) {
     console.error('Unable to connect to the database:', error);
