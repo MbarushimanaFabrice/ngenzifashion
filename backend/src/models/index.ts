@@ -6,6 +6,13 @@ import Product_categories from "./Product_categories";
 import Product_images from "./Product_images";
 import Product_variants from "./Product_variants";
 import Customers from "./Customers";
+import Customer_addresses from "./Customer_addresses";
+import Orders from "./Orders";
+import Order_items from "./Order_items";
+import Payments from "./Payments";
+import Discounts from "./Discounts";
+import Reviews from "./Reviews";
+import Report_requests from "./Report_requests";
 
 export {
   User,
@@ -15,7 +22,14 @@ export {
   Product_categories,
   Product_images,
   Product_variants,
-  Customers
+  Customers,
+  Customer_addresses,
+  Orders,
+  Order_items,
+  Payments,
+  Discounts,
+  Reviews,
+  Report_requests
 };
 
 // User.hasMany(Shop,{
