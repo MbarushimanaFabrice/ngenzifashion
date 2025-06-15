@@ -32,15 +32,17 @@ export {
   Report_requests
 };
 
-// User.hasMany(Shop,{
-//   foreignKey: 'owner_id',
-//   as: 'shops'
-// })
+User.hasMany(Shop,{
+  foreignKey: 'owner_id',
+  as: 'shop'
+})
+Shop.belongsTo(User,{
+  foreignKey: 'owner_id',
+  as: 'users'
+})
 
-// Shop.belongsTo(User,{
-//   foreignKey: 'owner_id',
-//   as: 'owner'
-// })
+
+
 // Categories.belongsToMany(Products, {
 //   through: Product_categories,
 //   foreignKey: 'category_id',
