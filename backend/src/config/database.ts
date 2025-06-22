@@ -11,7 +11,7 @@ const sequelize = new Sequelize({
   password: process.env.DB_PASSWORD || '',
   dialect: 'mysql',
   logging: false,
-  pool: {
+  pool: { 
     max: 5,
     min: 0,
     acquire: 30000,

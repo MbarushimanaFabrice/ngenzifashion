@@ -1,3 +1,4 @@
+// models/Products.js
 import { DataTypes } from "sequelize";
 import sequelize from "../config/database";
 
@@ -11,8 +12,16 @@ const Products = sequelize.define('Products', {
     type: DataTypes.INTEGER,
     allowNull: false,
     references: {
-      model: 'shops',  
+      model: 'shops',
       key: 'shop_id'
+    }
+  },
+  category_id: {
+    type: DataTypes.INTEGER,
+    allowNull: false,
+    references: {
+      model: 'Categories',
+      key: 'category_id'
     }
   },
   name: {
@@ -24,8 +33,16 @@ const Products = sequelize.define('Products', {
     allowNull: true
   },
   price: {
-    type: DataTypes.DECIMAL(10,2),
+    type: DataTypes.DECIMAL(10, 2),
     allowNull: false
+  },
+  compare_at_price: {
+    type: DataTypes.DECIMAL(10, 2),
+    allowNull: true
+  },
+  cost_per_item: {
+    type: DataTypes.DECIMAL(10, 2),
+    allowNull: true
   },
   sku: {
     type: DataTypes.STRING(50),
@@ -44,10 +61,6 @@ const Products = sequelize.define('Products', {
     type: DataTypes.STRING(50),
     allowNull: true
   },
-  category: {
-    type: DataTypes.STRING(50),
-    allowNull: true
-  },
   gender: {
     type: DataTypes.ENUM('Men', 'Women', 'Unisex', 'Kids'),
     allowNull: true
@@ -62,7 +75,7 @@ const Products = sequelize.define('Products', {
   }
 }, {
   timestamps: true,
-  tableName: 'products',
+  tableName: 'products'
 });
 
 export default Products;

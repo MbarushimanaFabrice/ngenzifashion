@@ -1,7 +1,8 @@
-
+// models/Categories.js
 import { DataTypes } from "sequelize";
 import sequelize from "../config/database";
-const Categories= sequelize.define('Categories', {
+
+const Categories = sequelize.define('Categories', {
   category_id: {
     type: DataTypes.INTEGER,
     autoIncrement: true,
@@ -19,7 +20,7 @@ const Categories= sequelize.define('Categories', {
     type: DataTypes.INTEGER,
     allowNull: true,
     references: {
-      model: 'categories',  
+      model: 'categories',
       key: 'category_id'
     }
   },
@@ -31,21 +32,9 @@ const Categories= sequelize.define('Categories', {
     type: DataTypes.BOOLEAN,
     defaultValue: true
   }
-},{
+}, {
   timestamps: true,
   tableName: 'categories'
-})
+});
 
 export default Categories;
-
-
-// CREATE TABLE categories (
-//     category_id INT AUTO_INCREMENT PRIMARY KEY,
-//     name VARCHAR(50) NOT NULL,
-//     description TEXT,
-//     parent_id INT,
-//     image_url VARCHAR(255),
-//     is_active BOOLEAN DEFAULT TRUE,
-//     FOREIGN KEY (parent_id) REFERENCES categories(category_id)
-// );
-
