@@ -1,7 +1,7 @@
 import { DataTypes } from "sequelize";
 import sequelize from "../config/database";
 
-const Products= sequelize.define('Products', {
+const Products = sequelize.define('Products', {
   product_id: {
     type: DataTypes.INTEGER,
     autoIncrement: true,
@@ -27,19 +27,7 @@ const Products= sequelize.define('Products', {
     type: DataTypes.DECIMAL(10,2),
     allowNull: false
   },
-  compare_at_price: {
-    type: DataTypes.DECIMAL(10,2),
-    allowNull: true
-  },
-  cost_per_item: {
-    type: DataTypes.DECIMAL(10,2),
-    allowNull: true
-  },
   sku: {
-    type: DataTypes.STRING(50),
-    allowNull: true
-  },
-  barcode: {
     type: DataTypes.STRING(50),
     allowNull: true
   },
@@ -48,12 +36,20 @@ const Products= sequelize.define('Products', {
     defaultValue: 0,
     allowNull: false
   },
-  weight: {
-    type: DataTypes.DECIMAL(10,2),
+  size: {
+    type: DataTypes.STRING(10),
     allowNull: true
   },
-  weight_unit: {
-    type: DataTypes.STRING(10),
+  color: {
+    type: DataTypes.STRING(50),
+    allowNull: true
+  },
+  category: {
+    type: DataTypes.STRING(50),
+    allowNull: true
+  },
+  gender: {
+    type: DataTypes.ENUM('Men', 'Women', 'Unisex', 'Kids'),
     allowNull: true
   },
   is_published: {
@@ -64,10 +60,9 @@ const Products= sequelize.define('Products', {
     type: DataTypes.BOOLEAN,
     defaultValue: false
   }
-},{
+}, {
   timestamps: true,
   tableName: 'products',
-})
+});
 
 export default Products;
- 

@@ -15,4 +15,4 @@ router.get("/:user_id", getUserById);
 router.put("/:user_id", updateUser);
 router.delete("/:user_id", deleteUser);
 
-export default router;
+export default router; 

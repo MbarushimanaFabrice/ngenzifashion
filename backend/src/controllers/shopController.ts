@@ -52,7 +52,7 @@ export const getShops = async (req: Request, res: Response): Promise<void> => {
       include: [
         {
           model: User,
-          as: "users",
+          as: "users", 
           attributes: ["user_id","username","email","createdAt"]
         }
       ]
@@ -81,6 +81,7 @@ export const getShopById = async (
       include: [
         {
           model: User,
+          as:"users",
           attributes: ["user_id","username","email","createdAt"]
         }
       ]
@@ -90,11 +91,12 @@ export const getShopById = async (
         success: false,
         message: "Shop not found"
       });
-      res.status(201).json({
+     
+    }
+     res.status(201).json({
         success: true,
         data: shop
       });
-    }
   } catch (error: any) {
     res.status(400).json({
       success: false,

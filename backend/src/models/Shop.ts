@@ -21,7 +21,7 @@ const Shop = sequelize.define('Shop', {
   },
   description: {
     type: DataTypes.TEXT,
-    allowNull: true
+    allowNull: true 
   },
   contact_email: {
     type: DataTypes.STRING(100),

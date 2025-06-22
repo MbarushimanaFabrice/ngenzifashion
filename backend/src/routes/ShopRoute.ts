@@ -12,4 +12,4 @@ router.get("/",getShops);
 router.get("/:shop_id",getShopById);
 router.put("/:shop_id",updateShop)
 
-export default router;
+export default router; 

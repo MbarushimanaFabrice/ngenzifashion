@@ -12,7 +12,7 @@ export const createUser= async(req:Request,res:Response):Promise<void>=>{
       message:"User created successfully"
     });
 
-
+ 
   }
   catch(error:any){
     res.status(400).json({
