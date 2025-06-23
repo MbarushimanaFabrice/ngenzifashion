@@ -37,13 +37,3 @@ const Product_images = sequelize.define('Product_images', {
 })
 
 export default Product_images;
-
-// -- CREATE TABLE product_images (
-// --     image_id INT AUTO_INCREMENT PRIMARY KEY,
-// --     product_id INT NOT NULL,
-// --     image_url VARCHAR(255) NOT NULL,
-// --     alt_text VARCHAR(100),
-// --     is_primary BOOLEAN DEFAULT FALSE,
-// --     display_order INT DEFAULT 0,
-// --     FOREIGN KEY (product_id) REFERENCES products(product_id)
-// -- );
