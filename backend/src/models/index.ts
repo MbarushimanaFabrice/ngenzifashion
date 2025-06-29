@@ -4,8 +4,7 @@ import Categories from "./Categories";
 import Products from "./Products";
 import Product_images from "./Product_images";
 import Product_variants from "./Product_variants";
-import Customers from "./Customers";
-import Customer_addresses from "./Customer_addresses";
+ import Customer_addresses from "./Customer_addresses";
 import Orders from "./Orders";
 import Order_items from "./Order_items";
 import Payments from "./Payments";
@@ -20,7 +19,6 @@ export {
   Products,
   Product_images,
   Product_variants,
-  Customers,
   Customer_addresses,
   Orders,
   Order_items,
