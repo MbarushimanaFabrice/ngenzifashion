@@ -1,70 +1,70 @@
 import { DataTypes } from "sequelize";
-
 import sequelize from "../config/database";
 
-const Customer_addresses = sequelize.define('Customer_addresses',
-  {
+const Customer_addresses = sequelize.define("Customer_addresses", {
   address_id: {
     type: DataTypes.INTEGER,
     autoIncrement: true,
-    primaryKey: true
+    primaryKey: true,
   },
-  customer_id: {
+
+  // ✅ Updated: Link to users table (customers are users)
+  user_id: {
     type: DataTypes.INTEGER,
     allowNull: false,
     references: {
-      model: 'customers',
-      key: 'customer_id'
-    }
+      model: "users",
+      key: "user_id",
+    },
   },
+
   address_type: {
-    type: DataTypes.ENUM('shipping', 'billing'),
-    allowNull: false
+    type: DataTypes.ENUM("shipping", "billing"),
+    allowNull: false,
   },
   first_name: {
     type: DataTypes.STRING(50),
-    allowNull: true
+    allowNull: true,
   },
   last_name: {
     type: DataTypes.STRING(50),
-    allowNull: true
+    allowNull: true,
   },
   address1: {
     type: DataTypes.STRING(100),
-    allowNull: false
+    allowNull: false,
   },
   address2: {
     type: DataTypes.STRING(100),
-    allowNull: true
+    allowNull: true,
   },
   city: {
     type: DataTypes.STRING(50),
-    allowNull: false
+    allowNull: false,
   },
   state: {
     type: DataTypes.STRING(50),
-    allowNull: false
+    allowNull: false,
   },
   country: {
     type: DataTypes.STRING(50),
-    allowNull: false
+    allowNull: false,
   },
   postal_code: {
     type: DataTypes.STRING(20),
-    allowNull: false
+    allowNull: false,
   },
   phone: {
     type: DataTypes.STRING(20),
-    allowNull: true
+    allowNull: true,
   },
   is_default: {
     type: DataTypes.BOOLEAN,
-    defaultValue: false
-  }
-
-
-},{
+    defaultValue: false,
+  },
+}, {
   timestamps: true,
-tableName: 'customer_addresses',
+  tableName: "customer_addresses",
 });
-export default Customer_addresses;  
+
+export default Customer_addresses;

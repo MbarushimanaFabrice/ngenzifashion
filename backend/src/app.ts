@@ -26,7 +26,7 @@ app.get("/",(req,res)=>{
     description:"Backed of e-comerce platform"
   })
 })
-
+ 
 // Database connection and server start
 const startServer = async () => {
   try {
@@ -34,8 +34,8 @@ const startServer = async () => {
     console.log('Database connection has been established successfully.');
     
     // Sync database (creates tables if they don't exist)
-    await sequelize.sync({ force:false });
-    console.log('Database synchronized successfully.'); 
+    await sequelize.sync({ force:true }); 
+    console.log('Database synchronized successfully.');  
     
     app.listen(PORT, () => {
         console.log(`API endpoints: http://localhost:${PORT}`);
