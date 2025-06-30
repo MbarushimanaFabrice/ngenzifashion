@@ -1,20 +1,25 @@
 import { Router } from "express";
-import { createPayment, getAllPayments, getPaymentById,updatePayment,deletePayment } from "../controllers/paymentController";
+import {
+  createCustomerAddress,
+  getAllCustomerAddresses,
+  getCustomerAddressById,
+  updateCustomerAddress,
+  deleteCustomerAddress
+} from "../controllers/customer_addressesController";
 
 // Initialize the router
 const router = Router();
 
-// Route to create a new payment
-router.post("/", createPayment);
-// Route to get all payments
-router.get("/", getAllPayments);
-// Route to get a payment by ID
-router.get("/:id", getPaymentById);
-// Route to update a payment by ID
-router.put("/:id", updatePayment);
-// Route to delete a payment by ID
-router.delete("/:id", deletePayment);
+// Route to create a new customer address
+router.post("/", createCustomerAddress);
+// Route to get all customer address
+router.get("/", getAllCustomerAddresses);
+// Route to get a customer address by ID
+router.get("/:id", getCustomerAddressById);
+// Route to update a customer address by ID
+router.put("/:id", updateCustomerAddress);
+// Route to delete a customer address by ID
+router.delete("/:id", deleteCustomerAddress);
 
 // Export the router
 export default router;
-
