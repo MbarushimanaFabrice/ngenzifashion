@@ -11,7 +11,7 @@ import Payments from "./Payments";
 import Discounts from "./Discounts";
 import Reviews from "./Reviews";
 import Report_requests from "./Report_requests";
-
+ 
 export {
   User,
   Shop,

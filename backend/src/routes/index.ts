@@ -6,7 +6,9 @@ import ProductRoute from "./ProductsRoute";
 import discountRoutes from "./discountRoutes"
 import ProductImageRoute from "./ProductImageRoute"; 
 import OrderRoute from "./orderRoute";
+import Customer_addressesRoutes from "./Customer_addressesRoutes"
 import PaymentRoute from "./paymentRoute";
+
 
 const router = Router();
 router.use("/user", UserRoute);
@@ -16,6 +18,7 @@ router.use("/products", ProductRoute);
 router.use("/discount",discountRoutes)
 router.use("/product_images", ProductImageRoute);
 router.use("/orders", OrderRoute);
+router.use("/customer_addresses", Customer_addressesRoutes);
 router.use("/payments", PaymentRoute);
  
 export default router;
