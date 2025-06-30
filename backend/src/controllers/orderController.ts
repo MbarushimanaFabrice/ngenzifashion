@@ -20,7 +20,7 @@ export const createOrder = async (
       payment_method,
       payment_status = "pending",
       shipping_address_id,
-      billing_address_id,
+      billing_address_id,  
       notes
     } = req.body;
 
