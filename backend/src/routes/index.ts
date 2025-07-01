@@ -7,7 +7,7 @@ import discountRoutes from "./discountRoutes"
 import ProductImageRoute from "./ProductImageRoute"; 
 import OrderRoute from "./orderRoute";
 import Customer_addressesRoutes from "./Customer_addressesRoutes"
-import PaymentRoute from "./paymentRoute";
+import PaymentRoute from "./PaymentRoute";
 
 
 const router = Router();
