@@ -11,7 +11,7 @@ import Payments from "./Payments";
 import Discounts from "./Discounts";
 import Reviews from "./Reviews";
 import Report_requests from "./Report_requests";
- 
+
 export {
   User,
   Shop,
@@ -21,7 +21,7 @@ export {
   Product_variants,
   Customer_addresses,
   Orders,
-  Order_items,
+  Order_items, 
   Payments,
   Discounts,
   Reviews,
@@ -108,10 +108,6 @@ Customer_addresses.hasMany(Orders, {
   as: "BillingOrders"
 });
 
- 
-
-
-
 // Relationships between Reviews, User, and Products
 // User ↔ Reviews
 User.hasMany(Reviews, { foreignKey: "user_id", as: "reviews" });
@@ -120,3 +116,30 @@ Reviews.belongsTo(User, { foreignKey: "user_id", as: "user" });
 // Product ↔ Reviews
 Products.hasMany(Reviews, { foreignKey: "product_id", as: "reviews" });
 Reviews.belongsTo(Products, { foreignKey: "product_id", as: "product" });
+
+// // Relationships between  Order_items, Orders, Products, and Product_variants
+// Orders ↔ Order_items
+Orders.hasMany(Order_items, { foreignKey: "order_id", as: "order_items" });
+Order_items.belongsTo(Orders, { foreignKey: "order_id", as: "order" });
+// Products ↔ Order_items
+Products.hasMany(Order_items, { foreignKey: "product_id", as: "order_items" });
+Order_items.belongsTo(Products, { foreignKey: "product_id", as: "product" });
+// Product_variants ↔ Order_items
+Product_variants.hasMany(Order_items, {
+  foreignKey: "variant_id",
+  as: " order_items"
+});
+Order_items.belongsTo(Product_variants, {
+  foreignKey: "variant_id",
+  as: "variant"
+});
+
+//  Product_variants and Products association
+Products.hasMany(Product_variants, {
+  foreignKey: "product_id",
+  as: "variants"
+});
+Product_variants.belongsTo(Products, {
+  foreignKey: "product_id",
+  as: "product"
+});

@@ -15,7 +15,7 @@ const Product_variants = sequelize.define(
       references: {
         key: "product_id",
         model: "products"
-      }
+      }  
     },
     name: {
       type: DataTypes.STRING(50),
@@ -46,13 +46,4 @@ const Product_variants = sequelize.define(
 
 export default Product_variants;
 
-// CREATE TABLE product_variants (
-//     variant_id INT AUTO_INCREMENT PRIMARY KEY,
-//     product_id INT NOT NULL,
-//     name VARCHAR(50) NOT NULL,
-//     value VARCHAR(50) NOT NULL,
-//     price_adjustment DECIMAL(10,2) DEFAULT 0.00,
-//     sku VARCHAR(50),
-//     quantity INT NOT NULL DEFAULT 0,
-//     FOREIGN KEY (product_id) REFERENCES products(product_id)
-// );
+ 

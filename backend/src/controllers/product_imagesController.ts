@@ -15,7 +15,7 @@ export const createProductImage = async (req: Request, res: Response): Promise<v
       is_primary: is_primary || false,
       display_order: display_order || 0
     });
-
+ 
     res.status(201).json({
       success: true,
       message: 'Product image created successfully',
