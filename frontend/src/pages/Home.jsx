@@ -1,5 +1,6 @@
 import React from 'react'
 import Hero from '../components/Hero'
+import Arrivals from '../components/Arrivals'
 import LatestCollection from '../components/LatestCollection'
 import BestSellers from '../components/BestSellers'
 import OurPolicy from '../components/OurPolicy'
@@ -9,6 +10,7 @@ const Home = () => {
   return (
     <div>
       <Hero />
+      <Arrivals/>
       <LatestCollection />
       <BestSellers />
       <OurPolicy />
