@@ -1,9 +1,10 @@
 import React from 'react'
 import { assets } from '../assets/assets'
+import HomeSlide from './HomeSlide'
 
 const Hero = () => {
   return (
-    <div className='flex flex-col sm:flex-row border border-gray-400'>
+    <div className='flex flex-col sm:flex-row border border-gray-400 relative h-auto'>
       <div className='w-full sm:w-1/2 flex items-center justify-center py-10 sm:py-0'>
             <div className='text-[#414141]'>
                 <div className='flex items-center gap-2'>
@@ -17,8 +18,10 @@ const Hero = () => {
                 </div>
             </div>
         </div>
-
-        <img className='w-full sm:w-1/2' src={assets.hero_img} alt="" />
+        <div className='w-full sm:w-1/2'>
+            <HomeSlide />
+        </div>
+        {/* <img className='w-full sm:w-1/2' src={assets.hero_img} alt="" /> */}
     </div>
   )
 }
