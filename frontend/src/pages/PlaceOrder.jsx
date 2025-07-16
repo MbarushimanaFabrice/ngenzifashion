@@ -21,7 +21,7 @@ const PlaceOrder = () => {
                         className="border border-gray-300 rounded py-1.5 px-3.5 w-full"
                         type="text"
                         placeholder="First Name"
-                    />
+                    /> 
                     <input
                         className="border border-gray-300 rounded py-1.5 px-3.5 w-full"
                         type="text"

@@ -16,7 +16,7 @@ const Hero = () => {
                     <p className='font-semibold text-sm md:text-base'>SHOP NOW</p>
                     <p className='w-8 md:w-11 h-[2px] bg-[#414141]'></p>
                 </div>
-            </div>
+            </div> 
         </div>
         <div className='w-full sm:w-1/2'>
             <HomeSlide /> 

@@ -16,7 +16,7 @@ function Arrivals() {
               For young
             </p>
           </div>
-          <div>
+          <div> 
             <img className=" rounded-lg h-[476px]" src={assets.men} />
             <p className=" absolute -mt-16 ml-4 text-white text-xl">
               For young
