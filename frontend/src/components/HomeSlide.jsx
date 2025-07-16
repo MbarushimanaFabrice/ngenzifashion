@@ -13,7 +13,7 @@ function HomeSlide() {
       backgroundImage: `url(${assets.hero_img})`,backgroundSize: 'cover',backgroundPosition:'center' }}>
             <span> 
                 
-            </span>
+            </span> 
             </div>
         </div>
         <div className="each-slide-effect">

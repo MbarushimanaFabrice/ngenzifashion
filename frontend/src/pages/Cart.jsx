@@ -15,7 +15,7 @@ const Cart = () => {
                 if (cartItems[items][item] > 0) {
                     tempData.push({
                         _id: items,
-                        size: item,
+                        size: item, 
                         quantity: cartItems[items][item],
                     });
                 }

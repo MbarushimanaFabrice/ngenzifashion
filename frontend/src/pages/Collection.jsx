@@ -20,7 +20,7 @@ const Collection = () => {
       else {
         setCategory(prev => [...prev,e.target.value])
       }
-    }
+    } 
 
     const toggleSubCategory = (e) => {
 
