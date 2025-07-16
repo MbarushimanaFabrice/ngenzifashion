@@ -11,7 +11,7 @@ function HomeSlide() {
             <div className=" h-[596px]" style={{
           
       backgroundImage: `url(${assets.hero_img})`,backgroundSize: 'cover',backgroundPosition:'center' }}>
-            <span>
+            <span> 
                 
             </span>
             </div>

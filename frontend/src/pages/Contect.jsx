@@ -13,22 +13,24 @@ const Contect = () => {
             <div className="my-10 flex flex-col justify-center md:flex-row gap-10 mb-28">
                 <img
                     className="w-full md:max-w-[480px]"
-                    src={assets.contact_img}
+                    src={assets.men}
                     alt=""
                 />
                 <div className="flex flex-col justify-center items-start gap-6">
                     <p className="font-semibold text-xl text-gray-600">
                         Our Store
                     </p>
-                    <p className="text-gray-500">
+                    Number:
+                    {/* <p className="text-gray-500">
                         0878950555 jasson portgas <br /> Tegal 350, Indonesia,
                         jawa tengah
-                    </p>
+                    </p> */}
                     <p className="text-gray-500">
-                        Tel: (415) 555-0132 <br /> Email: admin@jssncart.com
+                        Email:
+                        {/* Tel: (415) 555-0132 <br /> Email: admin@jssncart.com */}
                     </p>
                     <p className="font-semibold text-xl text-gray-600">
-                        Careers at JssnCart
+                        {/* Careers at JssnCart */}
                     </p>
                     <p className="text-gray-500">
                         Learn more about our teams and job opening.

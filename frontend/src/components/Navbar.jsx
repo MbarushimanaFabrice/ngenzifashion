@@ -10,7 +10,7 @@ const Navbar = () => {
 
     return (
         <div className="flex items-center justify-between py-3 font-medium">
-            <Link to={"/"}>
+            <Link to={"/"}> 
                 <img src={assets.logo} className=" h-32" alt="" />
             </Link>
 

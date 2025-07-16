@@ -19,7 +19,7 @@ const RelatedProduct = ({category, subCategory}) => {
             setRelated(productsCopy.slice(0,5));
         }
 
-    },[products])
+    },[products]) 
 
 
   return (
