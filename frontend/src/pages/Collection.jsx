@@ -15,6 +15,7 @@ const Collection = () => {
     const toggleCategory = (e) => {
 
       if (category.includes(e.target.value)) {
+        
           setCategory(prev=> prev.filter(item => item !== e.target.value))
       }
       else {

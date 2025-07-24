@@ -3,6 +3,8 @@ import { ShopContext } from "../content/ShopContext";
 import Title from "./Title";
 import ProductItem from "./ProductItem";
 
+
+
 const BestSellers = () => {
     const { products } = useContext(ShopContext);
     const [bestSeller, setBestSeller] = useState([]);
