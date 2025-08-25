@@ -80,7 +80,7 @@ const Navbar = () => {
                         className="w-5 min-w-5"
                         alt=""
                     />
-                    <p className="absolute right-[-5px] -left bottom-[-5px] w-4 text-center leading-4 bg-black text-white aspect-square rounded-full text-[8px] text-2xl">
+                    <p className="absolute -top-2 -right-2 w-5 h-5 flex items-center justify-center bg-black text-white rounded-full text-[10px]">
                         {getCartCount()}
                     </p>
                 </Link>
