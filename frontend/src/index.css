@@ -130,3 +130,26 @@
   width: 100%;
   height: auto;
 }
+/* Slider indicators – refine default react-slideshow-image dots */
+.indicators {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+  bottom: 18px !important;
+}
+
+.indicators .each-slideshow-indicator {
+  width: 10px !important;
+  height: 10px !important;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  transition: background 200ms ease, transform 200ms ease;
+}
+
+.indicators .each-slideshow-indicator.active,
+.indicators .each-slideshow-indicator:hover {
+  background: #ffffff;
+  transform: scale(1.1);
+}
