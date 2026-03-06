@@ -6,14 +6,14 @@ export const createOrder = async (
   res: Response
 ): Promise<void> => {
   // create a new order
-  try {
+  try {   
     const {
       order_number,
       user_id,
       shop_id,
       order_status,
       subtotal,   
-      tax_amount = 0.0,
+      tax_amount = 0.0,  
       shipping_amount = 0.0,
       discount_amount = 0.0,
       total_amount,
