@@ -1,0 +1,1394 @@
+{
+	"info": {
+		"_postman_id": "56858405-0d7b-4741-bfab-e3382cff6a5b",
+		"name": "Ngenzifashion",
+		"description": "Official APIs for Ngenzi shop",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28007200",
+		"_collection_link": "https://active-devs-9381.postman.co/workspace/Active-Devs-Workspace~2bf0741b-7ab9-4fc0-8424-234b80189f61/collection/28007200-56858405-0d7b-4741-bfab-e3382cff6a5b?action=share&source=collection_link&creator=28007200"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Create user",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"username\": \"Ngenzi\",\r\n  \"email\": \"ngenzi@gmail.com\",\r\n  \"password_hash\": \"$2b$10$5yFJG4RZd93NEfW7Gz2hSeClWfEACxmtx/6vEzR0D1t7IDCQ2IwlK\", \r\n  \"first_name\": \"Ngenzi\",\r\n  \"last_name\": \"Doe\",\r\n  \"phone\": \"+1-202-555-0143\",\r\n  \"user_type\": \"admin\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/user",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "All user",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/user",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get single user",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/user/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update user",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"username\": \"admin_jdoe\",\r\n  \"email\": \"john.doe@example.com\",\r\n  \"password_hash\": \"$2b$10$5yFJG4RZd93NEfW7Gz2hSeClWfEACxmtx/6vEzR0D1t7IDCQ2IwlK\", \r\n  \"first_name\": \"John\",\r\n  \"last_name\": \"Doe\",\r\n  \"phone\": \"+1-202-555-0143\",\r\n  \"user_type\": \"admin\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/user/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete user",
+					"request": {
+						"method": "DELETE",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Shop",
+			"item": [
+				{
+					"name": "Create Shop",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"owner_id\": 1,\r\n  \"shop_name\": \"Urban Style Boutique\",\r\n  \"description\": \"Trendy clothing and footwear for modern fashion lovers.\",\r\n  \"contact_email\": \"support@urbanstyle.com\",\r\n  \"contact_phone\": \"+1-415-555-1234\",\r\n  \"address\": \"245 Market Street\",\r\n  \"city\": \"San Francisco\",\r\n  \"state\": \"CA\",\r\n  \"country\": \"USA\",\r\n  \"postal_code\": \"94105\",\r\n  \"tax_id\": \"98-7654321\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/shop",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"shop"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "All shop",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/shop",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"shop"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Single Shop",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/shop/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"shop",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Shop",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"owner_id\": 1,\r\n  \"shop_name\": \"Ngenzi shop\",\r\n  \"description\": \"Trendy clothing and footwear for modern fashion lovers.\",\r\n  \"contact_email\": \"support@urbanstyle.com\",\r\n  \"contact_phone\": \"+1-415-555-1234\",\r\n  \"address\": \"245 Market Street\",\r\n  \"city\": \"San Francisco\",\r\n  \"state\": \"CA\",\r\n  \"country\": \"USA\",\r\n  \"postal_code\": \"94105\",\r\n  \"tax_id\": \"98-7654321\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/shop/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"shop",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Categories",
+			"item": [
+				{
+					"name": "Create categories",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Shoes\",\r\n  \"description\": \"Stylish and durable shoes for every occasion.\",\r\n  \"parent_id\": 1,\r\n  \"image_url\": \"https://example.com/images/categories/shoes.jpg\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/categories",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"categories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "All categories",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/categories",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"categories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Single categories",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/categories/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"categories",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update categories",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Shoes for Men\",\r\n  \"description\": \"Stylish and durable shoes for every occasion.\",\r\n  \"parent_id\": 1,\r\n  \"image_url\": \"https://example.com/images/categories/shoes.jpg\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/categories/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"categories",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete categories",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"shop_id\": 1,\r\n  \"name\": \"Jorndan\",\r\n  \"description\": \"Comfortable and stylish unisex white sneakers made with breathable material and durable soles.\",\r\n  \"price\": 79.99,\r\n  \"compare_at_price\": 99.99,\r\n  \"cost_per_item\": 45.00,\r\n  \"sku\": \"SNEAK-WHT-001\",\r\n  \"quantity\": 120,\r\n  \"size\": \"42\",\r\n  \"color\": \"White\",\r\n  \"category\": \"Shoes\",\r\n  \"gender\": \"Unisex\",\r\n  \"is_published\": true,\r\n  \"is_featured\": true\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/categories/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"categories",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Products",
+			"item": [
+				{
+					"name": "Create products",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"shop_id\": 1,\r\n  \"name\": \"Classic White Sneakers\",\r\n  \"description\": \"Comfortable and stylish unisex white sneakers made with breathable material and durable soles.\",\r\n  \"price\": 79.99,\r\n  \"compare_at_price\": 99.99,\r\n  \"cost_per_item\": 45.00,\r\n  \"sku\": \"SNEAK-WHT-001\",\r\n  \"quantity\": 120,\r\n  \"size\": \"42\",\r\n  \"color\": \"White\",\r\n  \"category_id\": 1,\r\n  \"gender\": \"Unisex\",\r\n  \"is_published\": true,\r\n  \"is_featured\": true\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/products",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "All Products",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/products",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Single Products",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/products/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"products",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update products",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"shop_id\": 1,\r\n  \"name\": \"Shoes New brand\",\r\n  \"description\": \"Comfortable and stylish unisex white sneakers made with breathable material and durable soles.\",\r\n  \"price\": 79.99,\r\n  \"compare_at_price\": 99.99,\r\n  \"cost_per_item\": 45.00,\r\n  \"sku\": \"SNEAK-WHT-001\",\r\n  \"quantity\": 120,\r\n  \"size\": \"42\",\r\n  \"color\": \"White\",\r\n  \"category_id\": 1,\r\n  \"gender\": \"Unisex\",\r\n  \"is_published\": true,\r\n  \"is_featured\": true\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/products/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"products",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete products",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"shop_id\": 1,\r\n  \"name\": \"Jorndan\",\r\n  \"description\": \"Comfortable and stylish unisex white sneakers made with breathable material and durable soles.\",\r\n  \"price\": 79.99,\r\n  \"compare_at_price\": 99.99,\r\n  \"cost_per_item\": 45.00,\r\n  \"sku\": \"SNEAK-WHT-001\",\r\n  \"quantity\": 120,\r\n  \"size\": \"42\",\r\n  \"color\": \"White\",\r\n  \"category\": \"Shoes\",\r\n  \"gender\": \"Unisex\",\r\n  \"is_published\": true,\r\n  \"is_featured\": true\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/products/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"products",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Product_Images",
+			"item": [
+				{
+					"name": "Create product_images",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"product_id\": \"1\",\r\n  \"image_url\": \"http://example.com/image.jpg\",\r\n  \"alt_text\": \"Description of the image\",\r\n  \"is_primary\": true,\r\n  \"display_order\": 1\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/product_images",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"product_images"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "All product_images",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/product_images",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"product_images"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getProductImagesByProductId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/product_images",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"product_images"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update product_images",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"shop_id\": 1,\r\n  \"name\": \"Shoes New brand\",\r\n  \"description\": \"Comfortable and stylish unisex white sneakers made with breathable material and durable soles.\",\r\n  \"price\": 79.99,\r\n  \"compare_at_price\": 99.99,\r\n  \"cost_per_item\": 45.00,\r\n  \"sku\": \"SNEAK-WHT-001\",\r\n  \"quantity\": 120,\r\n  \"size\": \"42\",\r\n  \"color\": \"White\",\r\n  \"category_id\": 1,\r\n  \"gender\": \"Unisex\",\r\n  \"is_published\": true,\r\n  \"is_featured\": true\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/product_images/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"product_images",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete product_images",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"shop_id\": 1,\r\n  \"name\": \"Jorndan\",\r\n  \"description\": \"Comfortable and stylish unisex white sneakers made with breathable material and durable soles.\",\r\n  \"price\": 79.99,\r\n  \"compare_at_price\": 99.99,\r\n  \"cost_per_item\": 45.00,\r\n  \"sku\": \"SNEAK-WHT-001\",\r\n  \"quantity\": 120,\r\n  \"size\": \"42\",\r\n  \"color\": \"White\",\r\n  \"category\": \"Shoes\",\r\n  \"gender\": \"Unisex\",\r\n  \"is_published\": true,\r\n  \"is_featured\": true\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/product_images/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"product_images",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Product variants",
+			"item": [
+				{
+					"name": "Create product variants",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"order_number\": \"1\",\r\n    \"user_id\": \"1\",\r\n    \"shop_id\": \"1\",\r\n    \"order_status\": \"pending\",\r\n    \"subtotal\": 100.0,\r\n    \"tax_amount\": 10.0,\r\n    \"shipping_amount\": 5.0,\r\n    \"discount_amount\": 0.0,\r\n    \"total_amount\": 115.0,\r\n    \"payment_method\": \"credit_card\",\r\n    \"payment_status\": \"pending\",\r\n    \"shipping_address_id\": \"3\",\r\n    \"billing_address_id\": \"3\",\r\n    \"notes\": \"Please deliver by next week.\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/orders",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"orders"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "All order",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/orders",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"orders"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Single order",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/orders/9",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"orders",
+								"9"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update order",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"order_number\": \"1\",\r\n    \"user_id\": \"1\",\r\n    \"shop_id\": \"1\",\r\n    \"order_status\": \"completed\",\r\n    \"subtotal\": 70.0,\r\n    \"tax_amount\": 90.0,\r\n    \"shipping_amount\": 5.0,\r\n    \"discount_amount\": 0.0,\r\n    \"total_amount\": 115.0,\r\n    \"payment_method\": \"credit_card\",\r\n    \"payment_status\": \"pending\",\r\n    \"shipping_address_id\": \"3\",\r\n    \"billing_address_id\": \"3\",\r\n    \"notes\": \"Please deliver by next week.\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/orders/9",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"orders",
+								"9"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete order",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"shop_id\": 1,\r\n  \"name\": \"Jorndan\",\r\n  \"description\": \"Comfortable and stylish unisex white sneakers made with breathable material and durable soles.\",\r\n  \"price\": 79.99,\r\n  \"compare_at_price\": 99.99,\r\n  \"cost_per_item\": 45.00,\r\n  \"sku\": \"SNEAK-WHT-001\",\r\n  \"quantity\": 120,\r\n  \"size\": \"42\",\r\n  \"color\": \"White\",\r\n  \"category\": \"Shoes\",\r\n  \"gender\": \"Unisex\",\r\n  \"is_published\": true,\r\n  \"is_featured\": true\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/orders/9",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"orders",
+								"9"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Discount",
+			"item": [
+				{
+					"name": "Create discount",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"shop_id\": \"1\",\r\n    \"code\": \"SUMMER2023\",\r\n    \"discount_type\": \"percentage\",\r\n    \"discount_value\": 20,\r\n    \"min_order_amount\": 100,\r\n    \"max_uses\": 50,\r\n    \"start_date\": \"2023-06-01\",\r\n    \"end_date\": \"2023-09-01\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/discount",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"discount"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "All discount",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/discount",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"discount"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Single discount",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/discount/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"discount",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update discount",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"shop_id\": \"1\",\r\n    \"code\": \"SUMMER2025\",\r\n    \"discount_type\": \"percentage\",\r\n    \"discount_value\": 20,\r\n    \"min_order_amount\": 100,\r\n    \"max_uses\": 50,\r\n    \"start_date\": \"2023-06-01\",\r\n    \"end_date\": \"2023-09-01\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/discount/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"discount",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete discount",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"shop_id\": 1,\r\n  \"name\": \"Jorndan\",\r\n  \"description\": \"Comfortable and stylish unisex white sneakers made with breathable material and durable soles.\",\r\n  \"price\": 79.99,\r\n  \"compare_at_price\": 99.99,\r\n  \"cost_per_item\": 45.00,\r\n  \"sku\": \"SNEAK-WHT-001\",\r\n  \"quantity\": 120,\r\n  \"size\": \"42\",\r\n  \"color\": \"White\",\r\n  \"category\": \"Shoes\",\r\n  \"gender\": \"Unisex\",\r\n  \"is_published\": true,\r\n  \"is_featured\": true\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/discount/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"discount",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Customer_addresses",
+			"item": [
+				{
+					"name": "Create Customer addresses",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"user_id\": \"1\",\r\n  \"address_type\": \"home\",\r\n  \"first_name\": \"John\",\r\n  \"last_name\": \"Doe\",\r\n  \"address1\": \"123 Main St\",\r\n  \"address2\": \"Apt 4B\",\r\n  \"city\": \"New York\",\r\n  \"state\": \"NY\",\r\n  \"country\": \"USA\",\r\n  \"postal_code\": \"10001\",\r\n  \"phone\": \"123-456-7890\",\r\n  \"is_default\": true\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/customer_addresses",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"customer_addresses"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "All  Customer addresses",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/customer_addresses",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"customer_addresses"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Single  Customer addresses",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/customer_addresses/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"customer_addresses",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update  Customer addresses",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"user_id\": \"1\",\r\n  \"address_type\": \"office\",\r\n  \"first_name\": \"Kenny\",\r\n  \"last_name\": \"Doe\",\r\n  \"address1\": \"123 Main St\",\r\n  \"address2\": \"Apt 4B\",\r\n  \"city\": \"New York\",\r\n  \"state\": \"NY\",\r\n  \"country\": \"USA\",\r\n  \"postal_code\": \"10001\",\r\n  \"phone\": \"123-456-7890\",\r\n  \"is_default\": true\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/customer_addresses/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"customer_addresses",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete  Customer addresses",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"shop_id\": 1,\r\n  \"name\": \"Jorndan\",\r\n  \"description\": \"Comfortable and stylish unisex white sneakers made with breathable material and durable soles.\",\r\n  \"price\": 79.99,\r\n  \"compare_at_price\": 99.99,\r\n  \"cost_per_item\": 45.00,\r\n  \"sku\": \"SNEAK-WHT-001\",\r\n  \"quantity\": 120,\r\n  \"size\": \"42\",\r\n  \"color\": \"White\",\r\n  \"category\": \"Shoes\",\r\n  \"gender\": \"Unisex\",\r\n  \"is_published\": true,\r\n  \"is_featured\": true\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/customer_addresses/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"customer_addresses",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Order",
+			"item": [
+				{
+					"name": "Create Order",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"order_number\": \"1\",\r\n    \"user_id\": \"1\",\r\n    \"shop_id\": \"1\",\r\n    \"order_status\": \"pending\",\r\n    \"subtotal\": 100.0,\r\n    \"tax_amount\": 10.0,\r\n    \"shipping_amount\": 5.0,\r\n    \"discount_amount\": 0.0,\r\n    \"total_amount\": 115.0,\r\n    \"payment_method\": \"credit_card\",\r\n    \"payment_status\": \"pending\",\r\n    \"shipping_address_id\": \"3\",\r\n    \"billing_address_id\": \"3\",\r\n    \"notes\": \"Please deliver by next week.\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/orders",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"orders"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "All order",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/orders",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"orders"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Single order",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/orders/9",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"orders",
+								"9"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update order",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"order_number\": \"1\",\r\n    \"user_id\": \"1\",\r\n    \"shop_id\": \"1\",\r\n    \"order_status\": \"completed\",\r\n    \"subtotal\": 70.0,\r\n    \"tax_amount\": 90.0,\r\n    \"shipping_amount\": 5.0,\r\n    \"discount_amount\": 0.0,\r\n    \"total_amount\": 115.0,\r\n    \"payment_method\": \"credit_card\",\r\n    \"payment_status\": \"pending\",\r\n    \"shipping_address_id\": \"3\",\r\n    \"billing_address_id\": \"3\",\r\n    \"notes\": \"Please deliver by next week.\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/orders/9",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"orders",
+								"9"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete order",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"shop_id\": 1,\r\n  \"name\": \"Jorndan\",\r\n  \"description\": \"Comfortable and stylish unisex white sneakers made with breathable material and durable soles.\",\r\n  \"price\": 79.99,\r\n  \"compare_at_price\": 99.99,\r\n  \"cost_per_item\": 45.00,\r\n  \"sku\": \"SNEAK-WHT-001\",\r\n  \"quantity\": 120,\r\n  \"size\": \"42\",\r\n  \"color\": \"White\",\r\n  \"category\": \"Shoes\",\r\n  \"gender\": \"Unisex\",\r\n  \"is_published\": true,\r\n  \"is_featured\": true\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/orders/9",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"orders",
+								"9"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Order item",
+			"item": [
+				{
+					"name": "Create Order item",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"order_number\": \"1\",\r\n    \"user_id\": \"1\",\r\n    \"shop_id\": \"1\",\r\n    \"order_status\": \"pending\",\r\n    \"subtotal\": 100.0,\r\n    \"tax_amount\": 10.0,\r\n    \"shipping_amount\": 5.0,\r\n    \"discount_amount\": 0.0,\r\n    \"total_amount\": 115.0,\r\n    \"payment_method\": \"credit_card\",\r\n    \"payment_status\": \"pending\",\r\n    \"shipping_address_id\": \"3\",\r\n    \"billing_address_id\": \"3\",\r\n    \"notes\": \"Please deliver by next week.\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/order_items",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"order_items"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "All Order item",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/order_items",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"order_items"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Single Order item",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/order_items/9",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"order_items",
+								"9"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Order item",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"order_number\": \"1\",\r\n    \"user_id\": \"1\",\r\n    \"shop_id\": \"1\",\r\n    \"order_status\": \"completed\",\r\n    \"subtotal\": 70.0,\r\n    \"tax_amount\": 90.0,\r\n    \"shipping_amount\": 5.0,\r\n    \"discount_amount\": 0.0,\r\n    \"total_amount\": 115.0,\r\n    \"payment_method\": \"credit_card\",\r\n    \"payment_status\": \"pending\",\r\n    \"shipping_address_id\": \"3\",\r\n    \"billing_address_id\": \"3\",\r\n    \"notes\": \"Please deliver by next week.\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/order_items/9",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"order_items",
+								"9"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Order item",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"shop_id\": 1,\r\n  \"name\": \"Jorndan\",\r\n  \"description\": \"Comfortable and stylish unisex white sneakers made with breathable material and durable soles.\",\r\n  \"price\": 79.99,\r\n  \"compare_at_price\": 99.99,\r\n  \"cost_per_item\": 45.00,\r\n  \"sku\": \"SNEAK-WHT-001\",\r\n  \"quantity\": 120,\r\n  \"size\": \"42\",\r\n  \"color\": \"White\",\r\n  \"category\": \"Shoes\",\r\n  \"gender\": \"Unisex\",\r\n  \"is_published\": true,\r\n  \"is_featured\": true\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/order_items/9",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"order_items",
+								"9"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Payments",
+			"item": [
+				{
+					"name": "Create payments",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"order_id\": \"9\",\r\n    \"amount\": 100.00,\r\n    \"payment_method\": \"credit_card\",\r\n    \"transaction_id\": \"abcde12345\",\r\n    \"payment_status\": \"completed\",\r\n    \"payment_date\": \"2023-10-03T10:00:00Z\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/payments",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"payments"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "All payments",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/payments",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"payments"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Single payments",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/payments/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"payments",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update payments",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"order_id\": \"9\",\r\n    \"amount\": 100.00,\r\n    \"payment_method\": \"momo payment\",\r\n    \"transaction_id\": \"poiuyte2345\",\r\n    \"payment_status\": \"completed\",\r\n    \"payment_date\": \"2023-10-03T10:00:00Z\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/payments/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"payments",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete payments",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"shop_id\": 1,\r\n  \"name\": \"Jorndan\",\r\n  \"description\": \"Comfortable and stylish unisex white sneakers made with breathable material and durable soles.\",\r\n  \"price\": 79.99,\r\n  \"compare_at_price\": 99.99,\r\n  \"cost_per_item\": 45.00,\r\n  \"sku\": \"SNEAK-WHT-001\",\r\n  \"quantity\": 120,\r\n  \"size\": \"42\",\r\n  \"color\": \"White\",\r\n  \"category\": \"Shoes\",\r\n  \"gender\": \"Unisex\",\r\n  \"is_published\": true,\r\n  \"is_featured\": true\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/payments/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"payments",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

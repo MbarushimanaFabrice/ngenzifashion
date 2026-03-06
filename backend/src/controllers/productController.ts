@@ -9,14 +9,14 @@ export const createProduct = async (req: Request, res: Response): Promise<void> 
       name,
       description,
       price,
-      compare_at_price,
+      compare_at_price,   
       cost_per_item,
-      sku,
+      sku,  
       quantity,
       size,
       color,
       category_id,
-      gender,
+      gender,  
       is_published,
       is_featured
     } = req.body;

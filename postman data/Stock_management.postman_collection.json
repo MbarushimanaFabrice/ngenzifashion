@@ -1,0 +1,1122 @@
+{
+	"info": {
+		"_postman_id": "4e8f7678-d02d-4c52-9162-676abe1f0f67",
+		"name": "Stock_management",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28007200",
+		"_collection_link": "https://active-devs-9381.postman.co/workspace/Active-Devs-Workspace~2bf0741b-7ab9-4fc0-8424-234b80189f61/collection/28007200-4e8f7678-d02d-4c52-9162-676abe1f0f67?action=share&source=collection_link&creator=28007200"
+	},
+	"item": [
+		{
+			"name": "Admin",
+			"item": [
+				{
+					"name": "Branch",
+					"item": [
+						{
+							"name": "Create branches",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{jwtToken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"name\": \"Fabrice\",\r\n  \"location\": \"Rubavu\",\r\n  \"contact_person\": \"+250789435534\",\r\n  \"contact_email\": \"rubavu@gmai.com\",\r\n  \"contact_phone\": \"+250785644467\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}api/v1/admin/branches",
+									"host": [
+										"{{URL}}api"
+									],
+									"path": [
+										"v1",
+										"admin",
+										"branches"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get branches",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{jwtToken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"name\": \"Fabrice\",\r\n  \"location\": \"Rubavu\",\r\n  \"contact_person\": \"+250789435534\",\r\n  \"contact_email\": \"rubavu@gmai.com\",\r\n  \"contact_phone\": \"+250785644467\"\r\n}\r\n"
+								},
+								"url": {
+									"raw": "{{URL}}api/v1/admin/branches",
+									"host": [
+										"{{URL}}api"
+									],
+									"path": [
+										"v1",
+										"admin",
+										"branches"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Supply & Branchs request",
+					"item": [
+						{
+							"name": "Create Supply",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{jwtToken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "\r\n{\r\n  \"name\": \"Office Supplies Co\",\r\n  \"contact_person\": \"Jane Smith\",\r\n  \"contact_email\": \"jane@supplier.com\",\r\n  \"contact_phone\": \"+250784399956\",\r\n  \"address\": \"Kigali\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}api/v1/admin/suppliers",
+									"host": [
+										"{{URL}}api"
+									],
+									"path": [
+										"v1",
+										"admin",
+										"suppliers"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get all suppers",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{jwtToken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{URL}}api/v1/admin/suppliers",
+									"host": [
+										"{{URL}}api"
+									],
+									"path": [
+										"v1",
+										"admin",
+										"suppliers"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get single suppers",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{jwtToken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{URL}}api/v1/admin/suppliers/1",
+									"host": [
+										"{{URL}}api"
+									],
+									"path": [
+										"v1",
+										"admin",
+										"suppliers",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Supply Requests",
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Inventory",
+					"item": [
+						{
+							"name": "Create inventory item",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{jwtToken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"name\": \"Medical Surgical Mask\",\r\n  \"description\": \"Disposable medical surgical mask for protection\",\r\n  \"unit\": \"box\",\r\n  \"category\": \"medical_supplies\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}api/v1/inventory/items",
+									"host": [
+										"{{URL}}api"
+									],
+									"path": [
+										"v1",
+										"inventory",
+										"items"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get inventory items",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{jwtToken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"name\": \"Medical Surgical Mask\",\r\n  \"description\": \"Disposable medical surgical mask for protection\",\r\n  \"unit\": \"box\",\r\n  \"category\": \"medical_supplies\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}api/v1/inventory/items",
+									"host": [
+										"{{URL}}api"
+									],
+									"path": [
+										"v1",
+										"inventory",
+										"items"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get single inventory items",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{jwtToken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"name\": \"Medical Surgical Mask\",\r\n  \"description\": \"Disposable medical surgical mask for protection\",\r\n  \"unit\": \"box\",\r\n  \"category\": \"medical_supplies\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}api/v1/inventory/items/2",
+									"host": [
+										"{{URL}}api"
+									],
+									"path": [
+										"v1",
+										"inventory",
+										"items",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Create inventory item",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{jwtToken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"name\": \"Medical Surgical Mask\",\r\n  \"description\": \"Disposable medical surgical mask for protection\",\r\n  \"unit\": \"box\",\r\n  \"category\": \"medical_supplies\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}api/v1/inventory/items",
+									"host": [
+										"{{URL}}api"
+									],
+									"path": [
+										"v1",
+										"inventory",
+										"items"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete item",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{jwtToken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{URL}}api/v1/inventory/items/1",
+									"host": [
+										"{{URL}}api"
+									],
+									"path": [
+										"v1",
+										"inventory",
+										"items",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get categories",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{jwtToken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"name\": \"Medical Surgical Mask\",\r\n  \"description\": \"Disposable medical surgical mask for protection\",\r\n  \"unit\": \"box\",\r\n  \"category\": \"medical_supplies\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}api/v1/inventory/categories",
+									"host": [
+										"{{URL}}api"
+									],
+									"path": [
+										"v1",
+										"inventory",
+										"categories"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Approve/Reject",
+					"item": [
+						{
+							"name": "Get all users",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{jwtToken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{URL}}api/v1/admin/users/",
+									"host": [
+										"{{URL}}api"
+									],
+									"path": [
+										"v1",
+										"admin",
+										"users",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get all pending users",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{jwtToken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{URL}}api/v1/admin/users/pending",
+									"host": [
+										"{{URL}}api"
+									],
+									"path": [
+										"v1",
+										"admin",
+										"users",
+										"pending"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Approve pending users",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{jwtToken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "{{URL}}api/v1/admin/users/2/approve",
+									"host": [
+										"{{URL}}api"
+									],
+									"path": [
+										"v1",
+										"admin",
+										"users",
+										"2",
+										"approve"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Reject pending users",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{jwtToken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "{{URL}}api/v1/admin/users/2/reject",
+									"host": [
+										"{{URL}}api"
+									],
+									"path": [
+										"v1",
+										"admin",
+										"users",
+										"2",
+										"reject"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "purchase-orders",
+					"item": [
+						{
+							"name": "New Request",
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Register Admin User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"full_name\": \"Admin User\",\r\n  \"email\": \"admin@company.com\",\r\n  \"password\": \"secure123\",\r\n  \"role\": \"admin\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}api/v1/auth/register",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"v1",
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User login",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {},
+								"requests": {}
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"\r",
+									"const token = pm.response.json().data.token;\r",
+									"console.log(token);\r",
+									"pm.environment.set(\"jwtToken\", token);\r",
+									"console.log(\"JWT saved to environment:\", token);\r",
+									"pm.globals.set(\"jwtToken\", token);\r",
+									"console.log(\"JWT saved to globals:\", token);\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {},
+								"requests": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwtToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"admin@company.com\",\r\n    \"password\": \"secure123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}api/v1/auth/login",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"v1",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User profile",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwtToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"admin@company.com\",\r\n    \"password\": \"secure123\"\r\n}"
+						},
+						"url": {
+							"raw": "{{URL}}api/v1/auth/profile",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"v1",
+								"auth",
+								"profile"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Branch/Enventory",
+			"item": [
+				{
+					"name": "Register Branch",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"full_name\": \"Branch Manager\",\r\n  \"email\": \"branch1@gmail.com\",\r\n  \"password\": \"secure123\",\r\n  \"role\": \"branch\",\r\n  \"branch_id\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}api/v1/auth/register",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"v1",
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Branch Login",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"\r",
+									"const token = pm.response.json().data.token;\r",
+									"console.log(token);\r",
+									"pm.environment.set(\"jwtToken\", token);\r",
+									"console.log(\"JWT saved to environment:\", token);\r",
+									"pm.globals.set(\"jwtToken\", token);\r",
+									"console.log(\"JWT saved to globals:\", token);\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"admin@company.com\",\r\n    \"password\": \"secure123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}api/v1/auth/login",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"v1",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Supplier_Request",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwtToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n{\r\n  \"items\": [\r\n    { \"item_id\": 1, \"quantity_requested\": 50 }\r\n  ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}api/v1/branch/supply-requests",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"v1",
+								"branch",
+								"supply-requests"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get branch supplier requiest",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwtToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n{\r\n  \"items\": [\r\n    { \"item_id\": 1, \"quantity_requested\": 50 }\r\n  ]\r\n}"
+						},
+						"url": {
+							"raw": "{{URL}}api/v1/branch/supply-requests/",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"v1",
+								"branch",
+								"supply-requests",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get branch requiest by ID",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwtToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}api/v1/branch/supply-requests/2",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"v1",
+								"branch",
+								"supply-requests",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get inventory by branch",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwtToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Medical Surgical Mask\",\r\n  \"description\": \"Disposable medical surgical mask for protection\",\r\n  \"unit\": \"box\",\r\n  \"category\": \"medical_supplies\"\r\n}\r\n"
+						},
+						"url": {
+							"raw": "{{URL}}api/v1/branch/1/inventory",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"v1",
+								"branch",
+								"1",
+								"inventory"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Supplier",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"full_name\": \"Admin User\",\r\n  \"email\": \"supplier@company.com\",\r\n  \"password\": \"secure123\",\r\n  \"role\": \"supplier\",\r\n  \"supplier_id\":1\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}api/v1/auth/register",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"v1",
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"\r",
+									"const token = pm.response.json().data.token;\r",
+									"console.log(token);\r",
+									"pm.environment.set(\"jwtToken\", token);\r",
+									"console.log(\"JWT saved to environment:\", token);\r",
+									"pm.globals.set(\"jwtToken\", token);\r",
+									"console.log(\"JWT saved to globals:\", token);\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"supplier@company.com\",\r\n    \"password\": \"secure123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}api/v1/auth/login",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"v1",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Supplier Profile",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwtToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Medical Surgical Mask\",\r\n  \"description\": \"Disposable medical surgical mask for protection\",\r\n  \"unit\": \"box\",\r\n  \"category\": \"medical_supplies\"\r\n}\r\n"
+						},
+						"url": {
+							"raw": "{{URL}}api/v1/supplier/profile",
+							"host": [
+								"{{URL}}api"
+							],
+							"path": [
+								"v1",
+								"supplier",
+								"profile"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Blog",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:50013/api",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "50013",
+					"path": [
+						"api"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}

@@ -7,14 +7,14 @@ export const createDiscount = async (req: Request, res: Response): Promise<void>
   try {
     const {
       shop_id,
-      code,
+      code,   
       discount_type,
       discount_value,
       min_order_amount,
       max_uses,
       start_date,
       end_date
-    } = req.body;
+    } = req.body;   
 
     const newDiscount = await Discounts.create({
       shop_id,
