@@ -16,7 +16,7 @@ export const createOrder = async (
       tax_amount = 0.0,  
       shipping_amount = 0.0,
       discount_amount = 0.0,
-      total_amount,
+      total_amount,  
       payment_method,
       payment_status = "pending",
       shipping_address_id,

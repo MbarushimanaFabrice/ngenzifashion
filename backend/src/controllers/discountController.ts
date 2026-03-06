@@ -12,7 +12,7 @@ export const createDiscount = async (req: Request, res: Response): Promise<void>
       discount_value,
       min_order_amount,  
       max_uses,
-      start_date,
+      start_date,   
       end_date
     } = req.body;   
 
