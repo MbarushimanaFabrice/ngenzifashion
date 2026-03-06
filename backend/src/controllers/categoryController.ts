@@ -68,7 +68,7 @@ export const getCategoryById = async (req: Request, res: Response): Promise<void
       success: false,
       message: error.message
     });
-  }
+  }   
 };
 // update a category
 export const updateCategory = async (req: Request, res: Response): Promise<void> => {
