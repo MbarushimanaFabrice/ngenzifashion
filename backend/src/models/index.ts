@@ -71,7 +71,7 @@ User.hasMany(Orders, {
   foreignKey: "user_id",
   as: "orders"
 });
-
+   
 // ================================
 // User ↔ Customer_addresses association
 // ================================
