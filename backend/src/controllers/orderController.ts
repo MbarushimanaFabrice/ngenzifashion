@@ -11,7 +11,7 @@ export const createOrder = async (
       order_number,
       user_id,
       shop_id,
-      order_status,
+      order_status,  
       subtotal,   
       tax_amount = 0.0,  
       shipping_amount = 0.0,

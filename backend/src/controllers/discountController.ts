@@ -10,7 +10,7 @@ export const createDiscount = async (req: Request, res: Response): Promise<void>
       code,   
       discount_type,
       discount_value,
-      min_order_amount,
+      min_order_amount,  
       max_uses,
       start_date,
       end_date
