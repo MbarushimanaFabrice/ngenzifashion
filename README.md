@@ -284,4 +284,3 @@ This project is proprietary and confidential.
 
 ---
 
-Made with love by Ngenzi Fashion Team
